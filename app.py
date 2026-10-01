@@ -8,7 +8,7 @@ st.set_page_config(page_title="ML Model Predictor", page_icon="🤖", layout="ce
 # Cache model loading to optimize serverless performance
 @st.cache_resource
 def load_model():
-    with open("model.pkl", "rb") as file:
+    with open("sentiment.pkl", "rb") as file:
         model = pickle.load(file)
     return model
 
